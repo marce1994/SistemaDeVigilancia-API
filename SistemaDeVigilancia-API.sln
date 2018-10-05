@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeVigilancia.API", "SistemaDeVigilancia-API\SistemaDeVigilancia.API.csproj", "{00185EE1-2A85-413F-962B-D415D407E9B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeVigilancia.Common", "SistemaDeVigilancia.Common\SistemaDeVigilancia.Common.csproj", "{785024D4-33F2-485E-9D30-A71BA9752338}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeVigilancia.Common", "SistemaDeVigilancia.Common\SistemaDeVigilancia.Common.csproj", "{785024D4-33F2-485E-9D30-A71BA9752338}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SistemaDeVigilancia.API", "SistemaDeVigilancia.Api\SistemaDeVigilancia.API.csproj", "{2D6327FF-27D7-480C-98DD-A892F84B770C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3DB6CB52-67B9-401C-87EE-568C39D08130} = {3DB6CB52-67B9-401C-87EE-568C39D08130}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SistemaDeVigilancia.Service", "SistemaDeVigilancia.Service\SistemaDeVigilancia.Service.csproj", "{3DB6CB52-67B9-401C-87EE-568C39D08130}"
+	ProjectSection(ProjectDependencies) = postProject
+		{785024D4-33F2-485E-9D30-A71BA9752338} = {785024D4-33F2-485E-9D30-A71BA9752338}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +21,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{00185EE1-2A85-413F-962B-D415D407E9B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{00185EE1-2A85-413F-962B-D415D407E9B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{00185EE1-2A85-413F-962B-D415D407E9B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{00185EE1-2A85-413F-962B-D415D407E9B5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{785024D4-33F2-485E-9D30-A71BA9752338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{785024D4-33F2-485E-9D30-A71BA9752338}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{785024D4-33F2-485E-9D30-A71BA9752338}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{785024D4-33F2-485E-9D30-A71BA9752338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D6327FF-27D7-480C-98DD-A892F84B770C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6327FF-27D7-480C-98DD-A892F84B770C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6327FF-27D7-480C-98DD-A892F84B770C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6327FF-27D7-480C-98DD-A892F84B770C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DB6CB52-67B9-401C-87EE-568C39D08130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DB6CB52-67B9-401C-87EE-568C39D08130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DB6CB52-67B9-401C-87EE-568C39D08130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DB6CB52-67B9-401C-87EE-568C39D08130}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

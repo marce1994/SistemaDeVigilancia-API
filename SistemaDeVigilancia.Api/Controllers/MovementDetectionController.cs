@@ -17,15 +17,13 @@ namespace SistemaDeVigilancia.API.Controllers
         {
             this.sistemaDeVigilanciaContext = sistemaDeVigilanciaContext;
         }
-
-        // GET: api/Movement
+        
         [HttpGet]
         public async Task<IActionResult> Get()
         {
             return await Task.Run(() => { return new ObjectResult(sistemaDeVigilanciaContext.Set<MovementDetection>()); });
         }
         
-        // POST: api/Movement
         [HttpPost]
         public async void Post([FromBody] MovementDetection movement)
         {
